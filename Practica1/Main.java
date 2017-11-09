@@ -1,10 +1,6 @@
-
-
-
 import ProbGas.*;   //import de all lo de la carpeta ProbGas
 
 //imports de aima
-
 import aima.search.framework.Problem;
 import aima.search.framework.GraphSearch;
 import aima.search.framework.Search;
@@ -13,7 +9,6 @@ import aima.search.informed.HillClimbingSearch;
 import aima.search.informed.SimulatedAnnealingSearch;
 
 //imports de java
-
 import java.util.List;
 import java.util.Properties;
 import java.util.ArrayList;
@@ -32,23 +27,14 @@ public class Main {
         -HeuristicaMoreDaysA: maximiza dias de las peticiones atendidas
         -HeuristicaMoreDaysAN: maximiza dias de las peticiones NO atendidas
 
-
         -SuccesorFunctionHC2: Para estados iniciales NO vacios (generacion por indices y inteligente)
         -SuccesorFuncionHC3: Para estado inicial vacio con puedemover(solo mueve si hay espacio)
-
 
     *Modificar en board (comentad o no una linea en la creadora, esta bien marcado cual es)*
         -Generacion del estado inicial: vacio(comentar las dos) o lleno(descomentar llamada a funcion sol_init a escojer)
  */
 
-
-
     public static void main(String[] args) throws Exception{
-
-
-
-
-
 
         //parametros para el problema
         int seed=464;//seed para generar el mapa
@@ -63,8 +49,6 @@ public class Main {
         //parametros de una funcion del SA, Pag 19 del pdf de la practica
         int k=5;
         double l=0.002;
-
-
 
         Scanner reader = new Scanner(System.in);  // Reading from System.in
         System.out.println("Select mode: 1 for auto, 2 for manual");
@@ -93,7 +77,6 @@ public class Main {
             }
 
         }
-
 
         double tini = System.currentTimeMillis();
         ProbGasBoard board=new ProbGasBoard(seed,ngas,ncen,mult);
@@ -172,7 +155,6 @@ public class Main {
         }
 
         //sin parametros
-
         SearchAgent agent = new SearchAgent(p, alg);
 
         System.out.println();
@@ -199,7 +181,6 @@ public class Main {
             String property = properties.getProperty(key);
             System.out.println(key + " : " + property);
         }
-
     }
 
     private static void printActions(List actions) {
@@ -208,7 +189,5 @@ public class Main {
             System.out.println(action);
         }
     }
-
-
 
 }
